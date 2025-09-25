@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+typedef struct {
+    int dato;
+} Nodo;
+
+int main() {
+    Nodo n1;        // creo un nodo normal
+    Nodo *p;        // un puntero a nodo
+    p = &n1;        // p apunta a n1
+
+    // guardo 10 en dato con n1
+    n1.dato = 10;
+
+    // guardo 20 en dato con p
+    p->dato = 20;
+
+    // imprimo el dato con n1
+    printf("%d\n", n1.dato);
+
+    // imprimo el dato con p
+    printf("%d\n", p->dato);
+
+    return 0;
+}
