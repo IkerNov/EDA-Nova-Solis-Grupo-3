@@ -1,0 +1,12 @@
+1. ¿Qué diferencia observaron entre los valores iniciales con malloc y calloc?
+
+Con malloc, la memoria que se reserva no está limpia, así que los primeros valores que aparecen son completamente aleatorios, prácticamente basura que quedó ahí. En cambio, cuando se usa calloc, todos los elementos empiezan automáticamente en cero, porque esta función sí inicializa la memoria antes de entregarla.
+
+2. ¿Qué sucede si en realloc piden un tamaño más grande que el original? ¿y más pequeño?
+
+Si con realloc pedimos un tamaño mayor, el arreglo se hace más grande y se agregan nuevas posiciones que no estaban antes, y esas posiciones pueden quedar sin valor hasta que nosotros las rellenemos.
+Si pedimos un tamaño más pequeño, entonces el arreglo se corta y se pierde la información que estaba en las posiciones que quedaron fuera del nuevo tamaño.
+
+3. ¿Qué pasa si olvidan llamar a free?
+
+Si no usamos free, la memoria que reservamos se queda ocupada aunque el programa ya no la necesite. Eso provoca que haya “fugas de memoria”, lo cual a la larga puede hacer que el programa use más memoria de la necesaria o incluso tener problemas si se hace muchas veces.
