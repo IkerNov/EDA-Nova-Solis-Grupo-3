@@ -1,0 +1,32 @@
+Practica 6
+1. ¿Por qué en la cola circular no se desperdician posiciones como en la cola lineal?
+
+Porque cuando los índices llegan al final del arreglo, vuelven al inicio usando el operador %.
+Entonces los espacios que ya se usaron se pueden volver a usar.
+
+2. ¿Qué pasa cuando el índice final llega al final del arreglo?
+
+Se regresa automáticamente a la posición 0.
+Eso hace que la cola “dé la vuelta”.
+
+3. ¿Qué pasa si intento encolar cuando está llena?
+
+No deja y muestra un mensaje de error. Como el tamaño ya llegó al máximo, no se puede insertar nada más.
+
+Reflexión B – Deque
+
+1. ¿Qué diferencia tiene el deque frente a la cola circular?
+
+El deque deja meter y sacar tanto por el frente como por el final, o sea tiene dos lados.
+La cola circular solo permite meter por un lado y sacar por el otro.
+
+2. ¿Qué operaciones permiten simular FIFO y LIFO?
+	•	FIFO → insert_rear + delete_front
+	•	LIFO → insert_front + delete_front
+O también → insert_rear + delete_rear
+(depende de cómo lo uses)
+
+3. Aplicaciones del deque
+
+Sirve para navegadores (botones de atrás y adelante), para manejar tareas, para simulaciones, para optimizar algoritmos como BFS con prioridades, y en general cuando necesitas trabajar por ambos extremos.
+
