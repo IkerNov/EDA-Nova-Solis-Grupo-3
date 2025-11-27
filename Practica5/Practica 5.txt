@@ -1,0 +1,16 @@
+Practica 5
+
+1. ¿Qué diferencias noté entre el orden de salida de la pila y la cola?
+
+En mi práctica vi que la pila siempre saca primero el último que metí (LIFO), o sea que funciona como cuando apilas cosas y quitas lo de arriba.
+En cambio la cola saca primero el que entró primero (FIFO), como una fila de personas.
+
+2. ¿Qué pasa si hago pop en una pila vacía o dequeue en una cola vacía?
+
+El programa no deja y marca un mensaje de error diciendo que está vacía.
+Y no se puede sacar nada porque no hay datos.
+
+3. ¿Qué pasa si quiero meter más elementos que el máximo permitido?
+
+Dice que está llena y ya no te deja meter más. Aunque yo intente, simplemente muestra el mensaje de overflow.
+
