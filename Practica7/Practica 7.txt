@@ -1,0 +1,31 @@
+Practica 7
+Lista Simple
+1. ¿Por qué las listas enlazadas no requieren tamaño fijo como los arreglos?
+
+Las listas enlazadas no necesitan decidir de antemano cuántos elementos tendrán, porque cada nodo se va creando conforme se necesite, directamente en memoria con malloc().
+Es decir, la lista puede crecer o reducirse mientras el programa corre, sin tener que reservar un bloque grande de memoria como pasa con los arreglos tradicionales. Por eso son más flexibles.
+
+2. ¿Qué diferencia hay entre mover la cabeza y modificar los punteros internos?
+
+Mover la cabeza significa simplemente cambiar el puntero principal para que apunte al siguiente nodo. Esto normalmente ocurre cuando eliminamos el primer elemento.
+
+Modificar los punteros internos es un poco diferente, porque implica buscar un nodo que está a mitad o al final de la lista, y ajustar el puntero del nodo anterior para que “salte” al siguiente, quitando el nodo del medio sin cambiar la cabeza.
+
+Lista Circular
+
+1. ¿Qué ventaja tiene la lista circular frente a la simple?
+
+La ventaja principal es que en una lista circular nunca llegas a NULL; siempre puedes seguir recorriendo sin interrupciones porque el último nodo apunta de nuevo al primero. Esto permite ciclos continuos, recolecciones repetitivas o estructuras donde necesitas ir “dando vueltas” sin detenerte.
+
+2. ¿Qué error puede causar un bucle infinito en una lista circular?
+
+Si el programador no controla bien cuándo debe detenerse el recorrido, la lista circular puede hacer que el programa entre en un ciclo que nunca termina.
+Por ejemplo, si no comparas adecuadamente el puntero con la cabeza, el programa puede quedarse dando vueltas sin fin.
+
+3. ¿Qué estructuras o programas del mundo real se basan en listas circulares?
+
+Las listas circulares son muy útiles en sistemas donde se necesita repetir un ciclo una y otra vez. Algunos ejemplos son:
+	•	Rondas de turnos en videojuegos.
+	•	Menús cíclicos (avanzas y vuelves al inicio).
+	•	Programas que manejan colas circulares o buffers que se llenan y continúan desde el principio.
+	•	Planificadores de tareas en sistemas operativos (round-robin).
